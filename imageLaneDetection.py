@@ -18,8 +18,8 @@ img = cv2.imread(image_path, cv2.IMREAD_COLOR)
 output_img = lane_detector.detect_lanes(img)
 
 # Draw estimated depth
-cv2.namedWindow("Detected lanes", cv2.WINDOW_NORMAL) 
-cv2.imshow("Detected lanes", output_img)
-cv2.waitKey(0)
+# cv2.namedWindow("Detected lanes", cv2.WINDOW_NORMAL) 
+# cv2.imshow("Detected lanes", output_img)
+# cv2.waitKey(0)
 
 cv2.imwrite("output.jpg",output_img)
