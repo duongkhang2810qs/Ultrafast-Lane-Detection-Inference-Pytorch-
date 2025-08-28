@@ -6,8 +6,9 @@ import numpy as np
 from ultrafastLaneDetector import UltrafastLaneDetector, ModelType
 
 # ====== Cấu hình ======
-model_path = "models/tusimple_18.pth"   # hoặc "models/culane_18.pth"
-model_type = ModelType.TUSIMPLE
+model_path = "models/ep047.pth"
+# model_type = ModelType.TUSIMPLE
+model_type = ModelType.CULANE
 use_gpu = False
 
 input_path = "input1.mp4"                # đổi tên cho khớp file của bạn
