@@ -2,8 +2,9 @@ import cv2
 
 from ultrafastLaneDetector import UltrafastLaneDetector, ModelType
 
-model_path = "models/tusimple_18.pth"
-model_type = ModelType.TUSIMPLE
+model_path = "models/ep047.pth"
+# model_type = ModelType.TUSIMPLE
+model_type = ModelType.CULANE
 use_gpu = False
 
 image_path = "input.jpg"
