@@ -9,7 +9,7 @@ from ultrafastLaneDetector import UltrafastLaneDetector, ModelType
 model_path = "models/culane_18_2908.pth"
 # model_type = ModelType.TUSIMPLE
 model_type = ModelType.CULANE
-use_gpu = False
+use_gpu = True
 
 input_path = "input1.mp4"                # đổi tên cho khớp file của bạn
 output_path = "output1.avi"              # xuất AVI
