@@ -6,7 +6,7 @@ import numpy as np
 from ultrafastLaneDetector import UltrafastLaneDetector, ModelType
 
 # ====== Cấu hình ======
-model_path = "models/ep047.pth"
+model_path = "models/culane_18_2908.pth"
 # model_type = ModelType.TUSIMPLE
 model_type = ModelType.CULANE
 use_gpu = False
@@ -40,7 +40,7 @@ if not ret or frame is None:
 lane_detector = UltrafastLaneDetector(model_path, model_type, use_gpu)
 
 # Detect trước 1 frame để chốt kích thước writer
-first_out = lane_detector.detect_lanes(frame)
+first_out = lane_detector.detect_lanes(frame, draw_points=True)
 first_out = to_bgr_u8(first_out)
 
 # Bắt buộc kích thước chẵn cho một số codec
@@ -71,7 +71,7 @@ while True:
     if not ret or frame is None:
         break
     try:
-        out_img = lane_detector.detect_lanes(frame)
+        out_img = lane_detector.detect_lanes(frame, draw_points=True)
         out_img = to_bgr_u8(out_img)
         # Đảm bảo kích thước khớp writer
         if out_img.shape[1] != target_w or out_img.shape[0] != target_h:
